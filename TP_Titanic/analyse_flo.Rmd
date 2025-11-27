@@ -1,5 +1,6 @@
 ---
 title: "TP_Titanic"
+author: "HUANG Flora"
 output: html_document
 date: "2025-11-27"
 ---
@@ -20,18 +21,33 @@ head(TitanicSurvival)
 summary(TitanicSurvival)
 
 ```
-## Graphique : survivants en fonction de l'age et du sexe
+Descriptions des passagers du Titanic : Il y a plus d'hommes que de femmes sur le bateau de Titanic. Sur un total de 809 passagers : 500 passagers sont morts et un total de 309 passagers ont survécu. Concernant les classes sur le bateau, on retrouve en grande majorité des passagers de 3ème classes (709) suivi du 1er classe (323) et enfin la 2de classe (277). On retrouve en majorité des passagers entre la trentaine et la quarantaine. Le passager le plus âgé est un senior de 80 ans et le passager le moins âgé est un nouveau-né. 
+
+
+
+
+## Visualisation de la répartition des survivants en fonction du sexe et de la classe
 ```{r}
+library(ggplot2)
 ggplot(
   subset(TitanicSurvival, survived == "yes"),
   aes(x = sex, fill = passengerClass)
 ) +
   geom_bar(position = "dodge") +
-   scale_y_continuous(limits = c(0, 150)) +
-  theme_minimal() +
-  labs(title = "Passagers survivants par sexe et classe")
-
+   labs(title = "Passagers survivants par sexe et classe")
 ```
-#Il y a plus de survivants en 1st classe chez le femmes 
-#Il y a plus de survivants en 3rd classe chez les hommes
-#On retrouve mois de survivants de 2nd classe pour pour les femmes et les hommes
+
+Descrition : Chez les femmes, on retrouve plus de survivants de 1er suivi de la 3ème classe puis de la 2de classe. Chez les hommes, on retrouve plus de survivants de 3ème suivi de la 1st classe puis de la 2de classe. On retrouve moins de survivants de 2de classe pour les femmes et les hommes.
+
+
+##  Graphique de l'âge en fonction de la variable "survived"
+```{r}
+boxplot(age ~ survived, data = TitanicSurvival,
+         main = "Age en fonction des survivants",
+        xlab = "Survivants",
+        ylab = "Age")
+grid(nx = NA, ny = NULL, lty = 3, col = "gray")
+```
+
+
+
