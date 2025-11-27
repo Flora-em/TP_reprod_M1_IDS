@@ -21,7 +21,17 @@ head(TitanicSurvival)
 summary(TitanicSurvival)
 
 ```
-Descriptions des passagers du Titanic : Il y a plus d'hommes que de femmes sur le bateau de Titanic. Sur un total de 809 passagers : 500 passagers sont morts et un total de 309 passagers ont survécu. Concernant les classes sur le bateau, on retrouve en grande majorité des passagers de 3ème classes (709) suivi du 1er classe (323) et enfin la 2de classe (277). On retrouve en majorité des passagers entre la trentaine et la quarantaine. Le passager le plus âgé est un senior de 80 ans et le passager le moins âgé est un nouveau-né. 
+Description des passagers du Titanic : 
+
+- Il y a plus d'hommes que de femmes sur le bateau de Titanic. 
+
+- Sur un total de 809 passagers : 500 passagers sont morts et un total de 309 passagers ont survécu. 
+
+- Concernant les classes sur le bateau, on retrouve en grande majorité des passagers de 3ème classes (709) suivi du 1er classe (323) et enfin la 2de classe (277). 
+
+- On retrouve en majorité des passagers entre la trentaine et la quarantaine. 
+
+- Le passager le plus âgé est un senior de 80 ans et le passager le moins âgé est un nouveau-né. 
 
 
 
@@ -37,7 +47,13 @@ ggplot(
    labs(title = "Passagers survivants par sexe et classe")
 ```
 
-Descrition : Chez les femmes, on retrouve plus de survivants de 1er suivi de la 3ème classe puis de la 2de classe. Chez les hommes, on retrouve plus de survivants de 3ème suivi de la 1st classe puis de la 2de classe. On retrouve moins de survivants de 2de classe pour les femmes et les hommes.
+Descrition : 
+
+- Chez les femmes, on retrouve plus de survivants de 1er suivi de la 3ème classe puis de la 2de classe. 
+
+- Chez les hommes, on retrouve plus de survivants de 3ème suivi de la 1st classe puis de la 2de classe. 
+
+- On retrouve moins de survivants de 2de classe pour les femmes et les hommes.
 
 
 ##  Graphique de l'âge en fonction de la variable "survived"
