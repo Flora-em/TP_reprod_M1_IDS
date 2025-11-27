@@ -1,0 +1,25 @@
+---
+title: "Test"
+output: html_document
+date: "2025-11-27"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### Test
+
+##Intro 
+
+```{r}
+mean(c(1:1000))
+```
+
+## Graphique 1 : formule + graphique
+
+```{r}
+x<- c(1:1000)
+y<-2*x + rnorm(1000,0,1000)
+plot(x,y)
+```
