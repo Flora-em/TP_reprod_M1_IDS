@@ -1,0 +1,37 @@
+---
+title: "TP_Titanic"
+output: html_document
+date: "2025-11-27"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# TP Titanic
+```{r}
+library(carData)
+head(TitanicSurvival)
+
+```
+## Description statistique du TP Titanic
+```{r}
+
+summary(TitanicSurvival)
+
+```
+## Graphique : survivants en fonction de l'age et du sexe
+```{r}
+ggplot(
+  subset(TitanicSurvival, survived == "yes"),
+  aes(x = sex, fill = passengerClass)
+) +
+  geom_bar(position = "dodge") +
+   scale_y_continuous(limits = c(0, 150)) +
+  theme_minimal() +
+  labs(title = "Passagers survivants par sexe et classe")
+
+```
+#Il y a plus de survivants en 1st classe chez le femmes 
+#Il y a plus de survivants en 3rd classe chez les hommes
+#On retrouve mois de survivants de 2nd classe pour pour les femmes et les hommes
